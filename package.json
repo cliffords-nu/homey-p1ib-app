@@ -1,0 +1,25 @@
+{
+  "name": "nu.cliffords.p1ib-app",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint --ext .js,.ts --ignore-path .gitignore ."
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^16.1.4",
+    "@types/got": "^9.6.12",
+    "@types/homey": "npm:homey-apps-sdk-v3-types@^0.3.12",
+    "@types/node": "^22.15.30",
+    "eslint": "^7.32.0",
+    "eslint-config-athom": "^3.1.5",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "got": "^14.4.7",
+    "source-map-support": "^0.5.21"
+  },
+  "overrides": {
+    "ajv": "^8.17.1"
+  }
+}

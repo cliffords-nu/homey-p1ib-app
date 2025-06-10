@@ -1,0 +1,34 @@
+{
+  "id": "nu.cliffords.p1ib-app",
+  "version": "1.0.0",
+  "compatibility": ">=12.2.0",
+  "sdk": 3,
+  "brandColor": "#0d47a2",
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "P1ib Homey App"
+  },
+  "description": {
+    "en": "Adds support for RemneTechs P1ib energy module"
+  },
+  "category": [
+    "energy"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Henrik Nelson",
+    "email": "henrik@cliffords.nu"
+  },
+  "bugs": {
+    "url": "https://github.com/henriknelson/homey-p1ib-app/issues"
+  },
+  "source": "https://github.com/henriknelson/homey-p1ib-app",
+  "homepage": "https://remne.tech"
+}
