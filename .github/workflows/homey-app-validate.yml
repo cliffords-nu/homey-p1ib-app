@@ -10,6 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 23
+      - name: yarn install
+        run: yarn install
+      - name: tsc
+        run: yarn tsc
       - uses: athombv/github-action-homey-app-validate@master
         with:
           level: verified
