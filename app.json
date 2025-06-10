@@ -28,10 +28,11 @@
     "email": "henrik@cliffords.nu"
   },
   "bugs": {
-    "url": "https://github.com/henriknelson/homey-p1ib-app/issues"
+    "url": "https://github.com/cliffords-nu/homey-p1ib-app/issues"
   },
-  "source": "https://github.com/henriknelson/homey-p1ib-app",
+  "source": "https://github.com/cliffords-nu/homey-p1ib-app",
   "homepage": "https://remne.tech",
+  "support": "mailto:henrik@cliffords.nu",
   "esm": true,
   "drivers": [
     {
@@ -40,22 +41,39 @@
       },
       "class": "sensor",
       "capabilities": [
+        "measure_current",
         "measure_current.l1",
         "measure_current.l2",
         "measure_current.l3",
-        "meter_power.import",
-        "meter_power.export",
         "measure_power",
+        "measure_power.l1",
+        "measure_power.l2",
+        "measure_power.l3",
         "measure_power.export",
         "measure_power.import",
+        "measure_voltage",
         "measure_voltage.l1",
         "measure_voltage.l2",
         "measure_voltage.l3",
-        "measure_power.l1",
-        "measure_power.l2",
-        "measure_power.l3"
+        "measure_data_rate",
+        "meter_power",
+        "meter_power.imported",
+        "meter_power.exported",
+        "measure_frequency",
+        "operational_state",
+        "measure_signal_strength"
       ],
       "capabilitiesOptions": {
+        "measure_frequency": {
+          "title": {
+            "en": "Refresh Frequency"
+          }
+        },
+        "measure_signal_strength": {
+          "title": {
+            "en": "Wifi signal strength"
+          }
+        },
         "measure_power.export": {
           "title": {
             "en": "Power export"
@@ -72,12 +90,25 @@
             "en": "Currently importing power"
           }
         },
-        "meter_power.export": {
+        "meter_power.imported": {
+          "title": {
+            "en": "Energy import"
+          },
+          "desc": {
+            "en": "Total imported energy"
+          }
+        },
+        "meter_power.exported": {
           "title": {
             "en": "Energy export"
           },
           "desc": {
             "en": "Total exported energy"
+          }
+        },
+        "measure_voltage": {
+          "title": {
+            "en": "Voltage Total"
           }
         },
         "measure_voltage.l1": {
@@ -95,6 +126,11 @@
             "en": "Voltage L3"
           }
         },
+        "measure_current": {
+          "title": {
+            "en": "Current Total"
+          }
+        },
         "measure_current.l1": {
           "title": {
             "en": "Current L1"
@@ -108,6 +144,11 @@
         "measure_current.l3": {
           "title": {
             "en": "Current L3"
+          }
+        },
+        "measure_power": {
+          "title": {
+            "en": "Power Total"
           }
         },
         "measure_power.l1": {
