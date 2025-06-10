@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: yarn tsc
       - uses: athombv/github-action-homey-app-validate@master
         with:
           level: verified
