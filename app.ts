@@ -1,7 +1,7 @@
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
+//import { createRequire } from "module";
+//const require = createRequire(import.meta.url);
 
-require('source-map-support').install();
+//require('source-map-support').install();
 
 import Homey from 'homey';
 

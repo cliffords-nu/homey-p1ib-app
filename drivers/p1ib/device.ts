@@ -52,17 +52,20 @@ class P1ibDevice extends Homey.Device {
       const power = meterData.momentaryPowerImport - meterData.momentaryPowerExport;
 
       await Promise.all([
+        this.setCapabilityValue('measure_signal_strength', meterData.rssi),
         this.setCapabilityValue('measure_power', power),
         this.setCapabilityValue('measure_power.export', meterData.momentaryPowerExport),
         this.setCapabilityValue('measure_power.import', meterData.momentaryPowerImport),
-        this.setCapabilityValue('meter_power.import', meterData.activeEnergyImport),
-        this.setCapabilityValue('meter_power.export', meterData.activeEnergyExport),
+        this.setCapabilityValue('meter_power.imported', meterData.activeEnergyImport),
+        this.setCapabilityValue('meter_power.exported', meterData.activeEnergyExport),
+        this.setCapabilityValue('measure_current', meterData.currentL1 + meterData.currentL2 + meterData.currentL3),
         this.setCapabilityValue('measure_current.l1', meterData.currentL1),
         this.setCapabilityValue('measure_current.l2', meterData.currentL2),
         this.setCapabilityValue('measure_current.l3', meterData.currentL3),
         this.setCapabilityValue('measure_voltage.l1', meterData.voltageL1),
         this.setCapabilityValue('measure_voltage.l2', meterData.voltageL2),
         this.setCapabilityValue('measure_voltage.l3', meterData.voltageL3),
+        this.setCapabilityValue('measure_power', meterData.powerL1 + meterData.powerL2 + meterData.powerL3),
         this.setCapabilityValue('measure_power.l1', meterData.powerL1),
         this.setCapabilityValue('measure_power.l2', meterData.powerL2),
         this.setCapabilityValue('measure_power.l3', meterData.powerL3),
