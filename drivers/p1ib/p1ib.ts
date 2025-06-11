@@ -61,6 +61,9 @@ interface OldMeterDataGroup {
 
 export interface MeterDataOldFormat {
   d: Record<string, OldMeterDataGroup>;
+  info: {
+    rssi: number;
+  };
 }
 
 // ----------------------------------
@@ -87,6 +90,7 @@ export interface MeterReading {
   momentaryPowerExport: number;
   activeEnergyImport: number;
   activeEnergyExport: number;
+  rssi: number;
 }
 
 // ----------------------------------
@@ -182,6 +186,8 @@ export class P1ibConnector {
     const powerL2 = powerImportL2 - powerExportL2;
     const powerL3 = powerImportL3 - powerExportL3;
 
+    const rssi = meterData.info.rssi;
+
     return {
       voltageL1,
       voltageL2,
@@ -196,6 +202,7 @@ export class P1ibConnector {
       momentaryPowerExport,
       activeEnergyImport,
       activeEnergyExport,
+      rssi,
     };
   }
 }
